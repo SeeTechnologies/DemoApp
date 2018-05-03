@@ -14,11 +14,18 @@ class BeastsManager
 {
     private static let beastEntityName = "MyBeast"
     
+    private static var managedObjectContext: NSManagedObjectContext
+    {
+        get
+        {
+            let appDelegate = UIApplication.shared.delegate as! AppDelegate
+            return appDelegate.persistentContainer.viewContext
+        }
+    }
+    
     static func createBeast(name: String, species: String, profile: String? = nil, ownerId: Int64 = 0, aquatic: Bool = false) throws
     {
         //TODO: if ownerId != 0 create a MyBeast instance, otherwise create a UnownedBeast instance
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedObjectContext = appDelegate.persistentContainer.viewContext
         let beastEntityDescription = NSEntityDescription.entity(forEntityName: beastEntityName, in: managedObjectContext)!
         let beast = MyBeast(entity: beastEntityDescription, insertInto: managedObjectContext)
         
@@ -37,9 +44,6 @@ class BeastsManager
     
     static func fetchBeasts(ownerId: Int64) -> [MyBeast]
     {
-        let appDelegate = UIApplication.shared.delegate as! AppDelegate
-        let managedObjectContext = appDelegate.persistentContainer.viewContext
-        
         let fetchRequest = NSFetchRequest<MyBeast>(entityName: beastEntityName)
         
         do {
@@ -49,5 +53,14 @@ class BeastsManager
             print("Fetch beasts error - \(error.localizedDescription)")
             return [MyBeast]()
         }
+    }
+    
+    static func beastsFetchedResultsController(ownerId: Int64) -> NSFetchedResultsController<MyBeast>
+    {
+        let fetchRequest = NSFetchRequest<MyBeast>(entityName: beastEntityName)
+        let sortDescriptor = NSSortDescriptor(key: "Name", ascending: true)
+        fetchRequest.sortDescriptors = [sortDescriptor]
+        
+        return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
     }
 }

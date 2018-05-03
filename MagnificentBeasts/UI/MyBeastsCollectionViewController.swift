@@ -9,6 +9,8 @@
 import UIKit
 
 private let reuseIdentifier = "MyBeastCell"
+private let loggedInOwnerId = Int64(1) // LS - login screen out of scope
+private let fetchedResultsController = BeastsManager.beastsFetchedResultsController(ownerId: loggedInOwnerId)
 
 class MyBeastsCollectionViewController: UICollectionViewController {
 
@@ -48,13 +50,28 @@ class MyBeastsCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 3
+        if let count = fetchedResultsController.fetchedObjects?.count
+        {
+            return count
+        }
+        else
+        {
+            return 1
+        }
     }
 
     override func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: reuseIdentifier, for: indexPath) as! BeastCollectionViewCell
-    
-        cell.nameLabel.text = "Fred"
+        
+        if fetchedResultsController.fetchedObjects?.count != nil
+        {
+            let beast = fetchedResultsController.object(at: indexPath)
+            cell.nameLabel.text = beast.name
+        }
+        else
+        {
+            cell.nameLabel.text = "No beasts for you..."
+        }
         
         return cell
     }

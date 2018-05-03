@@ -23,6 +23,9 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     private func createData()
     {
+        // "No beasts" dog silouette image creative commons from https://www.maxpixel.net/Dog-House-Pet-Animal-Run-Dog-Doggy-Silhouette-3263081
+        // All other animal images creative commons from https://www.pexels.com/search/animal/
+        
         let loggedInOwnerId = Int64(1) // LS - login screen out of scope
         
         do {
