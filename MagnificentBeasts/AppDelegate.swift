@@ -16,8 +16,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
-        // Override point for customization after application launch.
+        createData()
+        
         return true
+    }
+    
+    private func createData()
+    {
+        let loggedInOwnerId = Int64(1) // LS - login screen out of scope
+        
+        do {
+            try BeastsManager.createBeast(name: "Molly", species: "cat", profile: "Molly is the cutest, furriest animal on earth", ownerId: loggedInOwnerId)
+            try BeastsManager.createBeast(name: "Snakey", species: "snake", profile: "He is the slitheriest animal on earth", ownerId: loggedInOwnerId)
+            
+        } catch let error as Error {
+            print("Beast creation failed due to error - \(error.localizedDescription)")
+        }
     }
 
     func applicationWillResignActive(_ application: UIApplication) {

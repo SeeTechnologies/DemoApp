@@ -15,6 +15,7 @@
 		497DAA542099614800499B20 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA522099614800499B20 /* LaunchScreen.storyboard */; };
 		497DAA5D2099633000499B20 /* MyBeastsCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DAA5C2099633000499B20 /* MyBeastsCollectionViewController.swift */; };
 		497DAA5F20996B2000499B20 /* BeastCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DAA5E20996B2000499B20 /* BeastCollectionViewCell.swift */; };
+		497DAA63209A86E100499B20 /* BeastsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DAA62209A86E100499B20 /* BeastsManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		497DAA552099614800499B20 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		497DAA5C2099633000499B20 /* MyBeastsCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyBeastsCollectionViewController.swift; sourceTree = "<group>"; };
 		497DAA5E20996B2000499B20 /* BeastCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeastCollectionViewCell.swift; sourceTree = "<group>"; };
+		497DAA62209A86E100499B20 /* BeastsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeastsManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,6 +62,8 @@
 		497DAA452099614700499B20 /* MagnificentBeasts */ = {
 			isa = PBXGroup;
 			children = (
+				497DAA61209A869500499B20 /* Managers */,
+				497DAA60209A807200499B20 /* Models */,
 				497DAA5B209962EE00499B20 /* UI */,
 				497DAA462099614700499B20 /* AppDelegate.swift */,
 				497DAA482099614700499B20 /* ViewController.swift */,
@@ -79,6 +83,21 @@
 				497DAA5E20996B2000499B20 /* BeastCollectionViewCell.swift */,
 			);
 			path = UI;
+			sourceTree = "<group>";
+		};
+		497DAA60209A807200499B20 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		497DAA61209A869500499B20 /* Managers */ = {
+			isa = PBXGroup;
+			children = (
+				497DAA62209A86E100499B20 /* BeastsManager.swift */,
+			);
+			path = Managers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -158,6 +177,7 @@
 				497DAA472099614700499B20 /* AppDelegate.swift in Sources */,
 				497DAA4F2099614800499B20 /* MagnificentBeasts.xcdatamodeld in Sources */,
 				497DAA5F20996B2000499B20 /* BeastCollectionViewCell.swift in Sources */,
+				497DAA63209A86E100499B20 /* BeastsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
