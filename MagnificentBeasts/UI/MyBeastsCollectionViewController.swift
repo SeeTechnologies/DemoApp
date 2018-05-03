@@ -50,6 +50,12 @@ class MyBeastsCollectionViewController: UICollectionViewController {
 
 
     override func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        do {
+            try fetchedResultsController.performFetch()
+        } catch let error as Error {
+            print("Fetched results controller fetch failed with error - \(error.localizedDescription)")
+        }
+        
         if let count = fetchedResultsController.fetchedObjects?.count
         {
             return count

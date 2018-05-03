@@ -58,7 +58,7 @@ class BeastsManager
     static func beastsFetchedResultsController(ownerId: Int64) -> NSFetchedResultsController<MyBeast>
     {
         let fetchRequest = NSFetchRequest<MyBeast>(entityName: beastEntityName)
-        let sortDescriptor = NSSortDescriptor(key: "Name", ascending: true)
+        let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
         
         return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)

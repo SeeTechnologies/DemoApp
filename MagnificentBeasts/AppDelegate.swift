@@ -16,6 +16,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
 
 
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplicationLaunchOptionsKey: Any]?) -> Bool {
+        print(self.applicationSupportDirectory())
         createData()
         
         return true
@@ -37,6 +38,13 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
     }
 
+    // tip from http://www.cimgf.com/2014/10/29/protocols-in-swift-with-core-data/
+    private func applicationSupportDirectory() -> NSURL
+    {
+        let urls = FileManager.default.urls(for: .applicationSupportDirectory, in: .userDomainMask)
+        return urls[urls.endIndex-1] as NSURL
+    }
+    
     func applicationWillResignActive(_ application: UIApplication) {
         // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
         // Use this method to pause ongoing tasks, disable timers, and invalidate graphics rendering callbacks. Games should use this method to pause the game.
