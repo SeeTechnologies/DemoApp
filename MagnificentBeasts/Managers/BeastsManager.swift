@@ -42,6 +42,19 @@ class BeastsManager
         }
     }
     
+    static func allBeastsCount() -> Int
+    {
+        let fetchRequest = NSFetchRequest<MyBeast>(entityName: beastEntityName)
+        
+        do {
+            return try managedObjectContext.count(for: fetchRequest)
+            
+        } catch let error as Error {
+            print("Fetch beasts error - \(error.localizedDescription)")
+            return 0
+        }
+    }
+    
     static func fetchBeasts(ownerId: Int64) -> [MyBeast]
     {
         let fetchRequest = NSFetchRequest<MyBeast>(entityName: beastEntityName)
@@ -60,6 +73,8 @@ class BeastsManager
         let fetchRequest = NSFetchRequest<MyBeast>(entityName: beastEntityName)
         let sortDescriptor = NSSortDescriptor(key: "name", ascending: true)
         fetchRequest.sortDescriptors = [sortDescriptor]
+        let predicate = NSPredicate(format: "ownerId = %i", argumentArray: [ownerId])
+        fetchRequest.predicate = predicate
         
         return NSFetchedResultsController(fetchRequest: fetchRequest, managedObjectContext: managedObjectContext, sectionNameKeyPath: nil, cacheName: nil)
     }

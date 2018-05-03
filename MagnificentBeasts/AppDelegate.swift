@@ -27,14 +27,22 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // "No beasts" dog silouette image creative commons from https://www.maxpixel.net/Dog-House-Pet-Animal-Run-Dog-Doggy-Silhouette-3263081
         // All other animal images creative commons from https://www.pexels.com/search/animal/
         
-        let loggedInOwnerId = Int64(1) // LS - login screen out of scope
-        
-        do {
-            try BeastsManager.createBeast(name: "Molly", species: "cat", profile: "Molly is the cutest, furriest animal on earth", ownerId: loggedInOwnerId)
-            try BeastsManager.createBeast(name: "Snakey", species: "snake", profile: "He is the slitheriest animal on earth", ownerId: loggedInOwnerId)
+        if BeastsManager.allBeastsCount() == 0
+        {
+            let loggedInOwnerId = Int64(1) // LS - login screen out of scope
             
-        } catch let error as Error {
-            print("Beast creation failed due to error - \(error.localizedDescription)")
+            do {
+                try BeastsManager.createBeast(name: "Molly", species: "cat", profile: "Molly is the cutest, furriest animal on earth", ownerId: loggedInOwnerId)
+                try BeastsManager.createBeast(name: "Snakey", species: "snake", profile: "He is the slitheriest animal on earth", ownerId: loggedInOwnerId)
+                try BeastsManager.createBeast(name: "Rover", species: "dog", profile: "A true best friend")
+                try BeastsManager.createBeast(name: "Shamu", species: "whale", profile: "New owner must have oceanfront property", aquatic: true)
+                try BeastsManager.createBeast(name: "Jiminy", species: "grasshopper", profile: "Suitable for apartment dwellers", ownerId: loggedInOwnerId)
+                try BeastsManager.createBeast(name: "Horsey", species: "horse", profile: "New owner must have rangeland")
+                try BeastsManager.createBeast(name: "Frogger", species: "frog", profile: "New owner must have a pond with lots of flies", ownerId: loggedInOwnerId, aquatic: true)
+                
+            } catch let error as Error {
+                print("Beast creation failed due to error - \(error.localizedDescription)")
+            }
         }
     }
 
