@@ -27,6 +27,7 @@
 		497DAA7A209BEE5C00499B20 /* Horsey.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA71209BEE5900499B20 /* Horsey.jpeg */; };
 		497DAA7B209BEE5C00499B20 /* Snakey2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA72209BEE5B00499B20 /* Snakey2.jpeg */; };
 		497DAA7C209BEE5C00499B20 /* Rover2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA73209BEE5C00499B20 /* Rover2.jpeg */; };
+		497DAA7E209C1B6C00499B20 /* BeastDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DAA7D209C1B6C00499B20 /* BeastDetailsViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		497DAA71209BEE5900499B20 /* Horsey.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Horsey.jpeg; sourceTree = "<group>"; };
 		497DAA72209BEE5B00499B20 /* Snakey2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Snakey2.jpeg; sourceTree = "<group>"; };
 		497DAA73209BEE5C00499B20 /* Rover2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rover2.jpeg; sourceTree = "<group>"; };
+		497DAA7D209C1B6C00499B20 /* BeastDetailsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeastDetailsViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -104,6 +106,7 @@
 			children = (
 				497DAA5C2099633000499B20 /* MyBeastsCollectionViewController.swift */,
 				497DAA5E20996B2000499B20 /* BeastCollectionViewCell.swift */,
+				497DAA7D209C1B6C00499B20 /* BeastDetailsViewController.swift */,
 			);
 			path = UI;
 			sourceTree = "<group>";
@@ -229,6 +232,7 @@
 				497DAA472099614700499B20 /* AppDelegate.swift in Sources */,
 				497DAA4F2099614800499B20 /* MagnificentBeasts.xcdatamodeld in Sources */,
 				497DAA5F20996B2000499B20 /* BeastCollectionViewCell.swift in Sources */,
+				497DAA7E209C1B6C00499B20 /* BeastDetailsViewController.swift in Sources */,
 				497DAA63209A86E100499B20 /* BeastsManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

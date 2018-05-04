@@ -10,6 +10,8 @@ import UIKit
 
 class ViewController: UIViewController {
 
+    fileprivate var beastForDetails: MyBeast?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
@@ -24,6 +26,8 @@ class ViewController: UIViewController {
     {
         if let segueIdentifier = segue.identifier, let viewController = segue.destination as? MyBeastsCollectionViewController
         {
+            viewController.delegate = self
+            
             switch segueIdentifier
             {
             case "EmbedMyBeasts":
@@ -34,7 +38,24 @@ class ViewController: UIViewController {
                 print("Unknown segue in ViewController")
             }
         }
+        else if let segueIdentifier = segue.identifier, let viewController = segue.destination as? BeastDetailsViewController
+        {
+            if let beastForDetails = beastForDetails, segueIdentifier == "ShowBeastDetails"
+            {
+                viewController.beast = beastForDetails
+            }
+        }
     }
 
+}
+
+extension ViewController: MyBeastsCollectionViewControllerDelegate
+{
+    func showDetails(beast: MyBeast) {
+        self.beastForDetails = beast
+        performSegue(withIdentifier: "ShowBeastDetails", sender: self)
+    }
+    
+    
 }
 

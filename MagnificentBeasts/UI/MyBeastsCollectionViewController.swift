@@ -17,9 +17,15 @@ private let reuseIdentifier = "MyBeastCell"
 private let loggedInOwnerId = Int64(1) // LS - login screen out of scope
 private let noOwnerId = Int64(0) // LS - beasts with no owner for Beast Finder
 
+protocol MyBeastsCollectionViewControllerDelegate
+{
+    func showDetails(beast: MyBeast)
+}
+
 class MyBeastsCollectionViewController: UICollectionViewController {
     private var fetchedResultsController = BeastsManager.beastsFetchedResultsController(ownerId: loggedInOwnerId)
     public var collectionStyle: CollectionStyle = .BeastFinder
+    public var delegate: MyBeastsCollectionViewControllerDelegate?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -123,6 +129,15 @@ class MyBeastsCollectionViewController: UICollectionViewController {
         return cell
     }
 
+    override func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if fetchedResultsController.fetchedObjects?.count != nil
+        {
+            let beast = fetchedResultsController.object(at: indexPath)
+            
+            delegate?.showDetails(beast: beast)
+        }
+    }
+    
     // MARK: UICollectionViewDelegate
 
     /*
