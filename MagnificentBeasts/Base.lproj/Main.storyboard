@@ -85,6 +85,7 @@
                                     <constraint firstAttribute="bottom" secondItem="3ye-89-Rbg" secondAttribute="bottom" id="ncj-cY-m07"/>
                                 </constraints>
                                 <connections>
+                                    <outlet property="beastImage" destination="TCj-oN-AGB" id="2LG-cd-41z"/>
                                     <outlet property="nameLabel" destination="3ye-89-Rbg" id="2tu-P4-Jyx"/>
                                 </connections>
                             </collectionViewCell>

@@ -43,6 +43,28 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             } catch let error as Error {
                 print("Beast creation failed due to error - \(error.localizedDescription)")
             }
+            
+            let imageName = "Molly"
+            let imageExtension = "jpeg"
+            let assetPath = Bundle.main.url(forResource: imageName, withExtension: imageExtension) //path(forResource: imageName, ofType: imageExtension)
+            let documentsPath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+            let fileManager = FileManager.default
+            let newImagePath = URL(fileURLWithPath: documentsPath).appendingPathComponent(imageName).appendingPathExtension(imageExtension)
+            
+            do {
+                if let assetPath = assetPath
+                {
+                    try fileManager.copyItem(at: assetPath, to: newImagePath)
+                }
+                else
+                {
+                    print("Beast image copy failed due to: can't locate image file")
+                }
+
+                
+            } catch let error as Error {
+                print("Beast image copy failed due to error - \(error.localizedDescription)")
+            }
         }
     }
 

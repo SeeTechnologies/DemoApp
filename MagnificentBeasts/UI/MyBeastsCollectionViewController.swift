@@ -73,6 +73,16 @@ class MyBeastsCollectionViewController: UICollectionViewController {
         {
             let beast = fetchedResultsController.object(at: indexPath)
             cell.nameLabel.text = beast.name
+            
+            // LS - data model enforces name is not optional
+            if let image = ImageManager.keyImage(imagePrefix: beast.name!, imageExtension: "jpeg")
+            {
+               cell.beastImage.image = image
+            }
+            else
+            {
+                cell.beastImage.image = UIImage(named: "No Beasts")
+            }
         }
         else
         {

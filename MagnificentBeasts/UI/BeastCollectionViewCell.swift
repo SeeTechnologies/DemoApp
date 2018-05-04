@@ -10,6 +10,6 @@ import UIKit
 
 class BeastCollectionViewCell: UICollectionViewCell
 {
-    
+    @IBOutlet weak var beastImage: UIImageView!
     @IBOutlet weak var nameLabel: UILabel!
 }
