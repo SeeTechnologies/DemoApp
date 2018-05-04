@@ -8,12 +8,19 @@
 
 import UIKit
 
+public enum CollectionStyle {
+    case MyBeasts,
+    BeastFinder
+}
+
 private let reuseIdentifier = "MyBeastCell"
 private let loggedInOwnerId = Int64(1) // LS - login screen out of scope
 private let fetchedResultsController = BeastsManager.beastsFetchedResultsController(ownerId: loggedInOwnerId)
 
 class MyBeastsCollectionViewController: UICollectionViewController {
 
+    public var collectionStyle: CollectionStyle = .BeastFinder
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -24,9 +31,31 @@ class MyBeastsCollectionViewController: UICollectionViewController {
         // LS - remove line below, this CollectionViewController boilerplate overrides the class set in the storyboard!
 //        self.collectionView!.register(UICollectionViewCell.self, forCellWithReuseIdentifier: reuseIdentifier)
 
-        // Do any additional setup after loading the view.
+        switch collectionStyle {
+        case .MyBeasts:
+            configureForMyBeasts()
+        case .BeastFinder:
+            configureForBeastFinder()
+        }
+    }
+    
+    private func configureForMyBeasts()
+    {
+        if let layout = self.collectionView!.collectionViewLayout as? UICollectionViewFlowLayout
+        {
+            layout.scrollDirection = .vertical
+        }
     }
 
+    private func configureForBeastFinder()
+    {
+        if let layout = self.collectionView!.collectionViewLayout as? UICollectionViewFlowLayout
+        {
+            layout.scrollDirection = .horizontal
+            layout.itemSize = CGSize(width: 100, height: 100)
+        }
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.

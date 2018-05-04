@@ -20,6 +20,21 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?)
+    {
+        if let segueIdentifier = segue.identifier, let viewController = segue.destination as? MyBeastsCollectionViewController
+        {
+            switch segueIdentifier
+            {
+            case "EmbedMyBeasts":
+                viewController.collectionStyle = .MyBeasts
+            case "EmbedBeastFinder":
+                viewController.collectionStyle = .BeastFinder
+            default:
+                print("Unknown segue in ViewController")
+            }
+        }
+    }
 
 }
 

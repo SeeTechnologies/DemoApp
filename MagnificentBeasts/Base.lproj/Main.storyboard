@@ -20,7 +20,7 @@
                             <containerView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tOM-Z0-5x1">
                                 <rect key="frame" x="0.0" y="20" width="382" height="647"/>
                                 <connections>
-                                    <segue destination="ig0-kh-D4M" kind="embed" id="AU3-qE-Ghx"/>
+                                    <segue destination="ig0-kh-D4M" kind="embed" identifier="EmbedMyBeasts" id="AU3-qE-Ghx"/>
                                 </connections>
                             </containerView>
                         </subviews>
