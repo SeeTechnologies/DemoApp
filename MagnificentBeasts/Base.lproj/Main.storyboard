@@ -13,26 +13,44 @@
         <scene sceneID="tne-QT-ifu">
             <objects>
                 <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="MagnificentBeasts" customModuleProvider="target" sceneMemberID="viewController">
-                    <view key="view" contentMode="scaleToFill" ambiguous="YES" id="8bC-Xf-vdC">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <stackView opaque="NO" contentMode="scaleToFill" ambiguous="YES" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2CI-2Z-IQ7">
-                                <rect key="frame" x="0.0" y="20" width="375" height="603"/>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillProportionally" translatesAutoresizingMaskIntoConstraints="NO" id="2CI-2Z-IQ7">
+                                <rect key="frame" x="0.0" y="64" width="375" height="603"/>
                                 <subviews>
-                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ak7-c4-VUq">
-                                        <rect key="frame" x="0.0" y="0.0" width="375" height="456"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="   My Magnificent Beasts" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dmK-kv-e9s">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="500" id="MZL-QN-cza"/>
+                                            <constraint firstAttribute="height" constant="30" id="Yw8-WO-fa8"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <containerView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="500" translatesAutoresizingMaskIntoConstraints="NO" id="ak7-c4-VUq">
+                                        <rect key="frame" x="0.0" y="30" width="375" height="482.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="750" constant="450" id="MZL-QN-cza"/>
                                         </constraints>
                                         <connections>
                                             <segue destination="ig0-kh-D4M" kind="embed" identifier="EmbedMyBeasts" id="CxK-D5-I1h"/>
                                         </connections>
                                     </containerView>
-                                    <containerView opaque="NO" contentMode="scaleToFill" ambiguous="YES" translatesAutoresizingMaskIntoConstraints="NO" id="iId-SB-z5k">
-                                        <rect key="frame" x="0.0" y="456" width="375" height="147"/>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="1000" text="   Beast Finder" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2JC-PG-aPg">
+                                        <rect key="frame" x="0.0" y="512.5" width="375" height="30"/>
                                         <constraints>
-                                            <constraint firstAttribute="height" constant="147" id="Lag-T5-sST"/>
+                                            <constraint firstAttribute="height" constant="30" id="VnS-wb-f8F"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <containerView opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" translatesAutoresizingMaskIntoConstraints="NO" id="iId-SB-z5k">
+                                        <rect key="frame" x="0.0" y="542.5" width="375" height="60.5"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" priority="750" constant="147" id="Lag-T5-sST"/>
                                         </constraints>
                                         <connections>
                                             <segue destination="ig0-kh-D4M" kind="embed" identifier="EmbedBeastFinder" id="EIU-X5-pww"/>
@@ -70,7 +88,7 @@
             <objects>
                 <collectionViewController id="ig0-kh-D4M" customClass="MyBeastsCollectionViewController" customModule="MagnificentBeasts" customModuleProvider="target" sceneMemberID="viewController">
                     <collectionView key="view" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" id="GhW-YK-k8T">
-                        <rect key="frame" x="0.0" y="0.0" width="375" height="147"/>
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="60.5"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ylR-fg-Gjt">
