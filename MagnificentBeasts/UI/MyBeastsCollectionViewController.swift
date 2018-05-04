@@ -15,10 +15,10 @@ public enum CollectionStyle {
 
 private let reuseIdentifier = "MyBeastCell"
 private let loggedInOwnerId = Int64(1) // LS - login screen out of scope
-private let fetchedResultsController = BeastsManager.beastsFetchedResultsController(ownerId: loggedInOwnerId)
+private let noOwnerId = Int64(0) // LS - beasts with no owner for Beast Finder
 
 class MyBeastsCollectionViewController: UICollectionViewController {
-
+    private var fetchedResultsController = BeastsManager.beastsFetchedResultsController(ownerId: loggedInOwnerId)
     public var collectionStyle: CollectionStyle = .BeastFinder
     
     override func viewDidLoad() {
@@ -44,6 +44,7 @@ class MyBeastsCollectionViewController: UICollectionViewController {
         if let layout = self.collectionView!.collectionViewLayout as? UICollectionViewFlowLayout
         {
             layout.scrollDirection = .vertical
+            fetchedResultsController = BeastsManager.beastsFetchedResultsController(ownerId: loggedInOwnerId)
         }
     }
 
@@ -53,6 +54,7 @@ class MyBeastsCollectionViewController: UICollectionViewController {
         {
             layout.scrollDirection = .horizontal
             layout.itemSize = CGSize(width: 100, height: 100)
+            fetchedResultsController = BeastsManager.beastsFetchedResultsController(ownerId: noOwnerId)
         }
     }
     

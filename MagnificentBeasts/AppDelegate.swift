@@ -36,7 +36,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 try BeastsManager.createBeast(name: "Snakey", species: "snake", profile: "He is the slitheriest animal on earth", ownerId: loggedInOwnerId)
                 try BeastsManager.createBeast(name: "Rover", species: "dog", profile: "A true best friend")
                 try BeastsManager.createBeast(name: "Shamu", species: "whale", profile: "New owner must have oceanfront property", aquatic: true)
-                try BeastsManager.createBeast(name: "Jiminy", species: "grasshopper", profile: "Suitable for apartment dwellers", ownerId: loggedInOwnerId)
+                try BeastsManager.createBeast(name: "Jiminy", species: "grasshopper", profile: "Suitable for apartment dwellers")
                 try BeastsManager.createBeast(name: "Horsey", species: "horse", profile: "New owner must have rangeland")
                 try BeastsManager.createBeast(name: "Frogger", species: "frog", profile: "New owner must have a pond with lots of flies", ownerId: loggedInOwnerId, aquatic: true)
                 
