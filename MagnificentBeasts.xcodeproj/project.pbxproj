@@ -18,6 +18,15 @@
 		497DAA63209A86E100499B20 /* BeastsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DAA62209A86E100499B20 /* BeastsManager.swift */; };
 		497DAA66209BDC9900499B20 /* Molly.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA65209BDC9900499B20 /* Molly.jpeg */; };
 		497DAA68209BE15E00499B20 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 497DAA67209BE15E00499B20 /* ImageManager.swift */; };
+		497DAA6A209BEE1100499B20 /* Frogger.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA69209BEE1100499B20 /* Frogger.jpeg */; };
+		497DAA74209BEE5C00499B20 /* Jiminy.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA6B209BEE5500499B20 /* Jiminy.jpeg */; };
+		497DAA75209BEE5C00499B20 /* Shamu.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA6C209BEE5600499B20 /* Shamu.jpeg */; };
+		497DAA76209BEE5C00499B20 /* Rover.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA6D209BEE5600499B20 /* Rover.jpeg */; };
+		497DAA77209BEE5C00499B20 /* Molly2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA6E209BEE5600499B20 /* Molly2.jpeg */; };
+		497DAA78209BEE5C00499B20 /* Snakey.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA6F209BEE5700499B20 /* Snakey.jpeg */; };
+		497DAA7A209BEE5C00499B20 /* Horsey.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA71209BEE5900499B20 /* Horsey.jpeg */; };
+		497DAA7B209BEE5C00499B20 /* Snakey2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA72209BEE5B00499B20 /* Snakey2.jpeg */; };
+		497DAA7C209BEE5C00499B20 /* Rover2.jpeg in Resources */ = {isa = PBXBuildFile; fileRef = 497DAA73209BEE5C00499B20 /* Rover2.jpeg */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -34,6 +43,15 @@
 		497DAA62209A86E100499B20 /* BeastsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeastsManager.swift; sourceTree = "<group>"; };
 		497DAA65209BDC9900499B20 /* Molly.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Molly.jpeg; sourceTree = "<group>"; };
 		497DAA67209BE15E00499B20 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
+		497DAA69209BEE1100499B20 /* Frogger.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Frogger.jpeg; sourceTree = "<group>"; };
+		497DAA6B209BEE5500499B20 /* Jiminy.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Jiminy.jpeg; sourceTree = "<group>"; };
+		497DAA6C209BEE5600499B20 /* Shamu.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Shamu.jpeg; sourceTree = "<group>"; };
+		497DAA6D209BEE5600499B20 /* Rover.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rover.jpeg; sourceTree = "<group>"; };
+		497DAA6E209BEE5600499B20 /* Molly2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Molly2.jpeg; sourceTree = "<group>"; };
+		497DAA6F209BEE5700499B20 /* Snakey.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Snakey.jpeg; sourceTree = "<group>"; };
+		497DAA71209BEE5900499B20 /* Horsey.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Horsey.jpeg; sourceTree = "<group>"; };
+		497DAA72209BEE5B00499B20 /* Snakey2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Snakey2.jpeg; sourceTree = "<group>"; };
+		497DAA73209BEE5C00499B20 /* Rover2.jpeg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = Rover2.jpeg; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +127,15 @@
 		497DAA64209BDBC600499B20 /* Images */ = {
 			isa = PBXGroup;
 			children = (
+				497DAA71209BEE5900499B20 /* Horsey.jpeg */,
+				497DAA6B209BEE5500499B20 /* Jiminy.jpeg */,
+				497DAA6E209BEE5600499B20 /* Molly2.jpeg */,
+				497DAA6D209BEE5600499B20 /* Rover.jpeg */,
+				497DAA73209BEE5C00499B20 /* Rover2.jpeg */,
+				497DAA6C209BEE5600499B20 /* Shamu.jpeg */,
+				497DAA6F209BEE5700499B20 /* Snakey.jpeg */,
+				497DAA72209BEE5B00499B20 /* Snakey2.jpeg */,
+				497DAA69209BEE1100499B20 /* Frogger.jpeg */,
 				497DAA65209BDC9900499B20 /* Molly.jpeg */,
 			);
 			path = Images;
@@ -174,9 +201,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				497DAA542099614800499B20 /* LaunchScreen.storyboard in Resources */,
+				497DAA74209BEE5C00499B20 /* Jiminy.jpeg in Resources */,
+				497DAA78209BEE5C00499B20 /* Snakey.jpeg in Resources */,
+				497DAA75209BEE5C00499B20 /* Shamu.jpeg in Resources */,
 				497DAA512099614800499B20 /* Assets.xcassets in Resources */,
+				497DAA76209BEE5C00499B20 /* Rover.jpeg in Resources */,
 				497DAA4C2099614800499B20 /* Main.storyboard in Resources */,
+				497DAA7B209BEE5C00499B20 /* Snakey2.jpeg in Resources */,
+				497DAA7C209BEE5C00499B20 /* Rover2.jpeg in Resources */,
 				497DAA66209BDC9900499B20 /* Molly.jpeg in Resources */,
+				497DAA7A209BEE5C00499B20 /* Horsey.jpeg in Resources */,
+				497DAA77209BEE5C00499B20 /* Molly2.jpeg in Resources */,
+				497DAA6A209BEE1100499B20 /* Frogger.jpeg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
